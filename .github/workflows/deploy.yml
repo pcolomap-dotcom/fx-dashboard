@@ -1,11 +1,12 @@
-name: Build & Deploy FX Dashboard
+name: Build and Deploy FX Dashboard
 
-  on:
-    schedule:
-      - cron: "30 16 * * 1-5"
-    workflow_dispatch:
+  'on':
     push:
-      branches: [main]
+      branches:
+        - main
+    schedule:
+      - cron: '30 16 * * 1-5'
+    workflow_dispatch:
 
   permissions:
     contents: read
@@ -13,7 +14,7 @@ name: Build & Deploy FX Dashboard
     id-token: write
 
   concurrency:
-    group: "pages"
+    group: pages
     cancel-in-progress: false
 
   jobs:
@@ -23,7 +24,7 @@ name: Build & Deploy FX Dashboard
         - uses: actions/checkout@v4
         - uses: actions/setup-python@v5
           with:
-            python-version: "3.12"
+            python-version: '3.12'
         - name: Generar dashboard
           run: |
             mkdir -p _site
