@@ -3,7 +3,8 @@
 Dashboard de tipos de cambio con histórico de 30 días, tendencias y márgenes
 (`media ± σ`) sugeridos para compra/venta. **Web pública, gratis, sin servidor.**
 
-Datos: [api.frankfurter.app](https://api.frankfurter.app) (BCE).
+Datos: [mindicador.cl](https://mindicador.cl) (Banco Central de Chile),
+con fallback a [api.frankfurter.app](https://api.frankfurter.app) (BCE).
 Hosting: GitHub Pages. Refresh diario automático vía GitHub Actions.
 
 ---
